@@ -1,22 +1,20 @@
-import Card from '../components/Card';
-import styles from '../styles/Home.module.css';
-import ClientComponent from './ClientComponent.js';
+import Link from 'next/link'
 
-async function getPosts() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-  if (!res.ok) {
-    throw new Error('Failed to fetch posts');
-  }
-  return res.json();
-}
-
-export default async function Home() {
-  const posts = await getPosts();
-  
+export default function Home() {
   return (
-    <div className={styles.container}>
-      <h1>Posts</h1>
-      <ClientComponent posts={posts} />
-    </div>
-  );
+    <main className="min-h-screen p-8">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-6">Welcome to Next.js Posts</h1>
+        <p className="text-xl mb-8">
+          A demonstration of Next.js 14 with App Router and server components.
+        </p>
+        <Link 
+          href="/posts"
+          className="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors"
+        >
+          View Posts
+        </Link>
+      </div>
+    </main>
+  )
 }
