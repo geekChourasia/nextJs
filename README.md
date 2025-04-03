@@ -11,6 +11,7 @@ A Next.js application that demonstrates fetching and displaying posts from JSONP
 
 ## Project Structure
 
+```
 nextjs-assessment/
 ├── src/
 │   ├── app/
@@ -20,7 +21,7 @@ nextjs-assessment/
 │   │   └── Card.js           # Reusable card component
 │   └── styles/
 │       └── Home.module.css    # Styles for the main page
-
+```
 
 ## Getting Started
 
@@ -39,7 +40,9 @@ yarn install
 3. Run the development server:
 ```bash
 npm run dev
-
+# or
+yarn dev
+```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
@@ -60,5 +63,3 @@ The application fetches posts from:
   - title
   - body
   - userId
-
-## License
